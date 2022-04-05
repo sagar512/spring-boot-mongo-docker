@@ -1,8 +1,8 @@
 pipeline {
 
-// agent { node { label 'server IP' } }
+agent { node { label 'panther' } }
 
-/ agent none
+
 
 options {
     skipDefaultCheckout()
