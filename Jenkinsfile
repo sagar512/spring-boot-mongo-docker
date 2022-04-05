@@ -27,6 +27,7 @@ stages{
             checkout scm
         }
     }
+}
 
 
     
