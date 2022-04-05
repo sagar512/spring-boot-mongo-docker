@@ -1,6 +1,6 @@
 pipeline {
 
-#agent { node { label 'server IP' } }
+// agent { node { label 'server IP' } }
 
 agent none
 
