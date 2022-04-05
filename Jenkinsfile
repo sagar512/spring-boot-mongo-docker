@@ -13,16 +13,14 @@ options {
 /* tools {
          
         maven 'apache-maven-4.0.0'
-      //  ant 'apache-ant-1.8.2'
+        ant 'apache-ant-1.8.2'
 
 }*/
 
 
 stages{
 
-    // Checkout stage (code checkout from scm tool)
-
-    stage('checkout from GIT') {
+        stage('checkout from GIT') {
         steps {
             checkout scm
         }
