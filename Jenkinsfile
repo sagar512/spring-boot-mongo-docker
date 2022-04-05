@@ -30,14 +30,14 @@ stages{
 
 
     
-    Installing Dependancies   
+    // Installing Dependancies   
      stage("Install Project Dependencies"){
      steps {
          sh 'mvn install'
           }
       }
 
-     Building    
+     // Building    
      stage("Build Project"){
      steps { 
         sh 'mvn package' 
@@ -46,7 +46,7 @@ stages{
      }
 
 
-     Code quality checks
+    // Code quality checks
      stage('Run quality checks') {
          when {
              allOf {
@@ -63,7 +63,7 @@ stages{
          }
      }
     
-     Code quality gate checks
+   //  Code quality gate checks
      stage ("SonarQube Quality Gate") {
          when {
              allOf {
@@ -80,7 +80,7 @@ stages{
          }
      }
 
-    Create Container and push to Container registry
+   // Create Container and push to Container registry
     stage('Docker Build and Push to hub') {
     
         steps {
