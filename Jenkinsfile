@@ -40,7 +40,7 @@ stages{
      stage("Build Project"){
      steps { 
         sh 'mvn package' 
-        sh 'mvn clean'
+        
      }
      }
 
