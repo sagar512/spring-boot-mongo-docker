@@ -2,7 +2,7 @@ pipeline {
 
 // agent { node { label 'server IP' } }
 
-agent none
+/ agent none
 
 options {
     skipDefaultCheckout()
