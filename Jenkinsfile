@@ -30,23 +30,23 @@ stages{
 
     
    
-     stage("Install Project Dependencies"){
+     ("Install Project Dependencies")
      steps {
          sh 'mvn install'
           }
-      }
+      
 
   
-     stage("Build Project"){
+     
      steps { 
         sh 'mvn package' 
         
      }
-     }
+     
 
 
 
-     stage('Run quality checks') {
+     
          when {
              allOf {
                  branch 'branchname'
@@ -60,10 +60,10 @@ stages{
                  sh '${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=reponame -Dsonar.sources=src'
              }
          }
-     }
+     
     
 
-     stage ("SonarQube Quality Gate") {
+     
          when {
              allOf {
                  branch 'branchname'
@@ -77,7 +77,7 @@ stages{
                  }
              }
          }
-     }
+     
 
  
     stage('Docker Build and Push to hub') {
